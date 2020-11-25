@@ -1,0 +1,301 @@
+/*
+    general style
+ */
+
+html, body {
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
+html {
+  height: 100%;
+}
+
+body {
+  font-family: $sb, sans-serif;
+  font-size: 18px;
+  line-height: 20px;
+  background: $gradient;
+}
+
+.container {
+  width: 1200px;
+  margin: 0 auto;
+
+  @include mq(xl) {
+    width: 1140px;
+  }
+
+  @include mq(lg) {
+    width: 960px;
+  }
+
+  @include mq(md) {
+    width: 720px;
+  }
+
+  @include mq(s) {
+    width: 94%;
+  }
+
+  @include mq(xs) {
+    width: 90%;
+    min-width: 290px;
+  }
+}
+
+a {
+  display: block;
+  text-decoration: none;
+  text-align: center;
+
+  &:active, &:focus {
+    outline: none;
+  }
+}
+
+img {
+  display: block;
+  margin: 0 auto;
+  object-fit: cover;
+  user-select: none;
+}
+
+h1, h2 {
+  font-size: 36px;
+  line-height: 44px;
+  color: $white;
+}
+
+h3 {
+  font-family: $l, sans-serif;
+  font-size: 36px;
+  line-height: 40px;
+  text-align: center;
+  color: $pale-red;
+
+  span {
+    font-family: $sb;
+  }
+}
+
+h4 {
+  font-size: 24px;
+  line-height: 29px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: $dark-violet;
+}
+
+h6 {
+  font-size: 15px;
+  line-height: 18px;
+
+  span {
+    font-family: inherit;
+    color: $green;
+  }
+
+  output {
+    color: $orange;
+  }
+}
+
+span {
+  font-family: $r, sans-serif;
+}
+
+.delivery {
+  max-width: 702px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+
+  h6 {
+    color: $white;
+
+    &:nth-child(2) {
+      position: relative;
+
+      &:before, &:after {
+        content: "";
+        display: block;
+        width: 6px;
+        height: 6px;
+        background: $bright-green;
+        border-radius: 50%;
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+      }
+
+      &:before {
+        left: -46px;
+      }
+
+      &:after {
+        right: -46px;
+      }
+    }
+  }
+}
+
+.price {
+
+  span {
+    font-family: $sb, sans-serif;
+
+    &.old-price {
+      font-size: 30px;
+      line-height: 37px;
+      color: $pastel-purple;
+      display: inline-block;
+      position: relative;
+
+      &:after {
+        content: "";
+        display: block;
+        width: 100%;
+        height: 2px;
+        background: $pastel-purple;
+        position: absolute;
+        top: 55%;
+        left: 0;
+        transform: translateY(-50%);
+      }
+
+      &.small {
+        font-size: 24px;
+        line-height: 29px;
+      }
+    }
+
+    &.new-price {
+      font-size: 48px;
+      line-height: 58px;
+      color: $bright-green;
+
+      &.small {
+        font-size: 40px;
+        line-height: 49px;
+        color: $green;
+      }
+    }
+  }
+}
+
+.sale {
+  box-sizing: border-box;
+  width: 100px;
+  padding: 32px 10px 24px 8px;
+  background: $orange;
+  box-shadow: $drop-shadow1;
+  border-radius: 50%;
+  position: relative;
+
+  h1, h2 {
+
+  }
+
+  &:before, &:after {
+    content: "";
+    display: block;
+    background: $orange;
+    box-shadow: $drop-shadow1;
+    border-radius: 50%;
+    position: absolute;
+  }
+
+  &:before {
+    width: 17px;
+    height: 17px;
+  }
+
+  &:after {
+    width: 40px;
+    height: 39px;
+  }
+}
+
+a.to-order, .form-group.order button {
+  font-family: $sb, sans-serif;
+  font-size: 24px;
+  line-height: 29px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  color: $violet;
+  box-sizing: border-box;
+  width: 100%;
+  padding: 17px 0 14px;
+  background: $bright-green;
+  box-shadow: $drop-shadow1;
+  border: none;
+  border-radius: 100px;
+  transition: all 0.75s ease-in-out;
+
+  &:hover {
+    color: $white;
+    background: $pastel-purple;
+
+  }
+}
+
+a.to-order {
+  max-width: 280px;
+}
+
+.gallery, .photo {
+
+  &__content {
+    width: 100%;
+    max-width: 1620px;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+
+    a {
+      width: 18.51%;
+      max-width: 300px;
+      border-radius: 10px;
+      overflow: hidden;
+      position: relative;
+      filter: drop-shadow($drop-shadow1);
+      margin-bottom: 30px;
+
+      @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+        box-shadow: $drop-shadow1;
+      }
+
+      img {
+        width: 100%;
+        transition: all 0.5s ease-in-out;
+      }
+
+      &:after {
+        content: "";
+        display: block;
+        width: 50px;
+        height: 50px;
+        background: url("../img/zoom.png") no-repeat center/cover;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        opacity: 0;
+        transition: all 0.6s ease-in-out;
+      }
+
+      &:hover {
+
+        img {
+          opacity: .6;
+        }
+
+        &:after {
+          opacity: 1;
+        }
+      }
+    }
+  }
+}

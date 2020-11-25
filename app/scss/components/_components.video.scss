@@ -1,0 +1,72 @@
+/*
+    video style
+ */
+
+.video {
+  padding: 43px 0 383px;
+
+  &__content {
+    position: relative;
+
+    h3 {
+      text-align: left;
+      max-width: 418px;
+    }
+
+    figure {
+      position: absolute;
+
+      &.shoe {
+        top: 17px;
+        left: -63px;
+        z-index: 11;
+        pointer-events: none;
+
+        &:before {
+          content: "";
+          display: block;
+          width: 191px;
+          height: 179px;
+          background: url("../img/video/decor.png") no-repeat center/cover;
+          position: absolute;
+          top: 269.98px;
+          left: 90.23px;
+          z-index: -1;
+        }
+      }
+
+      &.clip {
+        width: 800px;
+        height: 481px;
+        border-radius: 10px;
+        filter: drop-shadow($drop-shadow1);
+        overflow: hidden;
+        cursor: pointer;
+        top: 47px;
+        right: -78px;
+
+        @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+          box-shadow: $drop-shadow1;
+        }
+
+        img {
+          width: 100%;
+        }
+
+        .video-play {
+          width: 80px;
+          height: 80px;
+          background: url("../img/video/video-play.png") no-repeat center/cover;
+          border-radius: 50%;
+          box-shadow: $drop-shadow1;
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+          pointer-events: none;
+        }
+      }
+    }
+
+  }
+}
