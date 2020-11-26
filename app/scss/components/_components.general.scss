@@ -253,6 +253,16 @@ a.to-order {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
+    position: relative;
+
+    @include mq(xxl) {
+      box-sizing: border-box;
+      padding: 0 25px;
+    }
+
+    @include mq(lg) {
+      padding: 0 15px;
+    }
 
     a {
       width: 18.51%;
@@ -265,6 +275,10 @@ a.to-order {
 
       @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
         box-shadow: $drop-shadow1;
+      }
+
+      @include mq(md) {
+        margin-bottom: 11px;
       }
 
       img {
@@ -296,6 +310,12 @@ a.to-order {
           opacity: 1;
         }
       }
+    }
+
+    &:before {
+      content: "";
+      display: block;
+      position: absolute;
     }
   }
 }

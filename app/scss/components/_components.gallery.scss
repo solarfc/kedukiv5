@@ -4,4 +4,27 @@
 
 .gallery {
   padding: 80px 0 51px;
+
+  @include mq(md) {
+    padding: 0 0 36px;
+  }
+
+  &__content {
+
+    &:before {
+      width: 157px;
+      height: 137px;
+      background: url("../img/gallery/decor-first.png") no-repeat center/cover;
+      top: -83px;
+      right: 185.66px;
+
+      @include mq(md) {
+        width: 94px;
+        height: 84px;
+        top: -53.68px;
+        left: -26.46px;
+        z-index: -1;
+      }
+    }
+  }
 }

@@ -5,6 +5,10 @@
 .catalog {
   padding: 43px 0 180px;
 
+  @include mq(md) {
+    padding: 30px 0 142px;
+  }
+
   .delivery {
 
   }
@@ -12,9 +16,14 @@
   h3 {
     max-width: 598px;
     margin: 41px auto 53px;
+
+    @include mq(md) {
+      margin: 45px auto 39px;
+    }
   }
 
   &__block {
+    position: relative;
 
     &-model {
       box-sizing: border-box;
@@ -26,6 +35,10 @@
       margin: 0 auto;
       position: relative;
       color: $pastel-violet;
+
+      @include mq(md) {
+        padding: 27px 15px 19px;
+      }
 
       &__rating {
         position: absolute;
@@ -74,6 +87,10 @@
         top: 65px;
         right: 20px;
 
+        @include mq(md) {
+          width: 270px;
+        }
+
         a {
           filter: drop-shadow($drop-shadow3);
 
@@ -88,6 +105,10 @@
 
         >a {
           width: 47.49%;
+
+          @include mq(md) {
+            display: none;
+          }
         }
 
         figure {
@@ -95,6 +116,10 @@
           flex-wrap: wrap;
           justify-content: space-between;
           width: 50%;
+
+          @include mq(md) {
+            width: 100%;
+          }
 
           a {
             width: 48.14%;
@@ -123,9 +148,21 @@
         align-items: center;
         margin-top: 24px;
 
+        @include mq(md) {
+          flex-wrap: wrap;
+        }
+
         .form-group {
           width: 28%;
           max-width: 260px;
+
+          @include mq(lg) {
+            width: 27%;
+          }
+
+          @include mq(md) {
+            width: 32%;
+          }
 
           input {
             font-family: $sb, sans-serif;
@@ -160,12 +197,28 @@
             bottom: -85px;
             left: 50%;
             transform: translateX(-50%);
+
+            @include mq(lg) {
+              width: 30%;
+            }
+
+            @include mq(md) {
+              width: 100%;
+            }
           }
         }
 
         .select-box {
           width: 28%;
           max-width: 260px;
+
+          @include mq(lg) {
+            width: 27%;
+          }
+
+          @include mq(md) {
+            width: 32%;
+          }
 
           .jq-selectbox {
             width: 100%;
@@ -241,7 +294,25 @@
           width: 14%;
           max-width: 127px;
           text-align: right;
+
+          @include mq(md) {
+            width: 100%;
+            max-width: 100%;
+            text-align: center;
+            margin-top: 16px;
+          }
         }
+      }
+    }
+
+    &:before {
+      /* скрыть на lg */
+      content: "";
+      display: block;
+      position: absolute;
+
+      @include mq(lg) {
+        display: none;
       }
     }
 
@@ -264,12 +335,28 @@
 
         ul {
           margin-bottom: 51px;
+
+          @include mq(md) {
+            margin-bottom: 28px;
+          }
         }
+      }
+
+      &:before {
+        width: 960px;
+        height: 863px;
+        background: url("../img/catalog/first.png") no-repeat center/cover;
+        top: -282px;
+        left: -348px;
       }
     }
 
     &.foggia {
       margin: 185px auto;
+
+      @include mq(md) {
+        margin: 140px auto;
+      }
 
       .catalog__block-model {
         ul {
@@ -278,7 +365,50 @@
 
         .color {
           margin-bottom: 15px;
+          display: flex;
+
+          p {
+
+          }
+
+          figure {
+            display: flex;
+            margin-left: 15px;
+
+            span {
+              display: block;
+              box-sizing: border-box;
+              width: 20px;
+              height: 20px;
+              border-radius: 50%;
+              cursor: pointer;
+              transition: all 0.5s ease-in-out;
+
+              &.brown {
+                background: #644e50;
+                border: 2px solid #fff;
+                margin-right: 14px;
+              }
+
+              &.black {
+                background: #000;
+                border: 2px solid #fff;
+              }
+
+              &.active {
+                border: 2px solid $green;
+              }
+            }
+          }
         }
+      }
+
+      &:before {
+        width: 891px;
+        height: 862px;
+        background: url("../img/catalog/second.png") no-repeat center/cover;
+        top: -185px;
+        right: -428.49px;
       }
     }
 
@@ -290,12 +420,28 @@
           display: block;
           max-width: 389px;
           margin: 30px 0 15px;
+
+          @include mq(lg) {
+            max-width: 360px;
+          }
         }
 
         form {
           justify-content: flex-start;
 
+          @include mq(md) {
+            justify-content: center;
+          }
+
           .form-group {
+
+            @include mq(lg) {
+              width: 30%;
+            }
+
+            @include mq(md) {
+              width: 50%;
+            }
 
             &.tel {
               margin-left: 15px;
@@ -306,6 +452,14 @@
             margin-left: auto;
           }
         }
+      }
+
+      &:before {
+        width: 921px;
+        height: 830px;
+        background: url("../img/catalog/third.png") no-repeat center/cover;
+        top: -89px;
+        left: -381px;
       }
     }
   }

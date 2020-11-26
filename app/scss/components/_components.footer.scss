@@ -1,0 +1,151 @@
+/*
+    footer style
+ */
+
+.footer {
+  padding: 46px 0 16px;
+  position: relative;
+  z-index: 8;
+
+  @include mq(md) {
+    padding: 80px 0 30px;
+  }
+
+  &__content {
+    position: relative;
+
+    h3 {
+      max-width: 746px;
+      margin: 0 auto;
+    }
+
+    h6 {
+      text-align: center;
+      color: $pastel-purple;
+      margin: 9px auto 4px;
+
+      &.address {
+        margin: -11px auto 0;
+        position: relative;
+        z-index: 12;
+
+        a {
+          display: inline-block;
+          color: inherit;
+        }
+      }
+    }
+
+    .price {
+      position: absolute;
+      top: 275px;
+      left: 27.25%;
+
+      @include mq(md) {
+        top: 185px;
+        left: 15.25%;
+      }
+
+      span {
+
+        &.new-price {
+          display: block;
+          margin-top: -9px;
+        }
+      }
+    }
+
+    &-img {
+      position: relative;
+
+      img {
+
+        @include mq(md) {
+          width: 100%;
+        }
+      }
+
+      svg {
+        position: absolute;
+        top: 28.92%;
+        left: -314px;
+        z-index: -1;
+
+        @include mq(xl) {
+          left: 0;
+          width: 500px;
+        }
+
+        @include mq(md) {
+          width: 100%;
+        }
+
+        path {
+          fill: #6771ca;
+        }
+      }
+
+      .sale {
+        position: absolute;
+        top: 38.56%;
+        right: 20.66%;
+
+        @include mq(md) {
+          right: 7.66%;
+        }
+
+        &:before {
+          bottom: -32px;
+          right: 0;
+        }
+
+        &:after {
+          top: -37px;
+          right: -30px;
+        }
+      }
+    }
+
+    a.to-order {
+      position: absolute;
+      bottom: 77px;
+      right: 22.91%;
+
+      @include mq(md) {
+        bottom: 55px;
+      }
+    }
+
+    &:before {
+      content: "";
+      display: block;
+      width: 128px;
+      height: 159px;
+      background: url("../img/footer/decor.png") no-repeat center/cover;
+      position: absolute;
+      top: 103px;
+      right: 18.12px;
+    }
+  }
+
+  &:before, &:after {
+    content: "";
+    display: block;
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    z-index: -1;
+  }
+
+  &:before {
+    height: 941px;
+    background: url("../img/footer/bg.png") no-repeat center/cover;
+  }
+
+  &:after {
+    height: 1900px;
+    background: url("../img/snowflakes.png") no-repeat center/cover;
+    transform: scale(1, -1);
+  }
+}

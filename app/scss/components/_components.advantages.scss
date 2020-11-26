@@ -5,6 +5,10 @@
 .advantages {
   padding: 40px 0;
 
+  @include mq(md) {
+    padding: 0 0 43px;
+  }
+
   h3 {
     max-width: 746px;
     margin: 0 auto 42px;
@@ -16,11 +20,36 @@
     display: flex;
     justify-content: space-between;
 
+    @include mq(lg) {
+      padding: 0 45px;
+    }
+
+    @include mq(md) {
+      padding: 0;
+    }
+
+    @include mq(s) {
+      flex-wrap: wrap;
+      max-width: 540px;
+      margin: 0 auto;
+    }
+
     &-block {
       background: transparent;
       width: 180px;
       height: 180px;
       perspective: 1000px;
+
+      @include mq(md) {
+        width: 24%;
+        height: auto;
+        perspective: none;
+      }
+
+      @include mq(s) {
+        width: 48%;
+        margin-bottom: 30px;
+      }
 
       &__inner {
         position: relative;
@@ -29,6 +58,11 @@
         text-align: center;
         transition: transform 0.8s;
         transform-style: preserve-3d;
+
+        @include mq(md) {
+          transition: none;
+          transform-style: initial;
+        }
 
         &-front, &-back {
           position: absolute;
@@ -41,6 +75,11 @@
           @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
             backface-visibility: visible;
           }
+
+          @include mq(md) {
+            position: static;
+            backface-visibility: visible;
+          }
         }
 
         &-front {
@@ -49,6 +88,10 @@
           @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
             opacity: 1;
             transition: all 0.5s ease-in-out;
+          }
+
+          @include mq(md) {
+            display: none;
           }
 
           svg {
@@ -72,6 +115,11 @@
             //transition: all 1.15s ease-in-out;
           }
 
+          @include mq(md) {
+            transform: none;
+            padding-bottom: 18px;
+          }
+
           svg {
 
             path {
@@ -87,6 +135,24 @@
         }
       }
 
+      &:nth-child(3) {
+
+        @include mq(s) {
+          margin-bottom: 0;
+        }
+
+        @include mq(xs) {
+          margin-bottom: 30px;
+        }
+      }
+
+      &:last-child {
+
+        @include mq(s) {
+          margin-bottom: 0;
+        }
+      }
+
       &:hover {
 
         .advantages__content-block__inner {
@@ -94,6 +160,10 @@
 
           @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
             transform: rotateY(0deg);
+          }
+
+          @include mq(md) {
+            transform: none;
           }
 
           &-front {
