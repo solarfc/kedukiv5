@@ -25,6 +25,10 @@
         margin: 29px auto 37.01px;
       }
 
+      @include mq(s) {
+        max-width: 600px;
+      }
+
       &__item {
         display: flex !important;
         box-sizing: border-box;
@@ -34,8 +38,17 @@
           padding: 0;
         }
 
+        @include mq(s) {
+          display: block !important;
+        }
+
         figure {
           box-sizing: border-box;
+          width: 50%;
+
+          @include mq(s) {
+            width: 100%;
+          }
 
           span {
             color: $white;
@@ -56,6 +69,10 @@
             @include mq(md) {
               padding-right: 25px;
             }
+
+            @include mq(s) {
+              padding-right: 0;
+            }
           }
 
           &:nth-child(2) {
@@ -63,6 +80,11 @@
 
             @include mq(md) {
               padding-left: 25px;
+            }
+
+            @include mq(s) {
+              padding-left: 0;
+              margin-top: 39px;
             }
           }
         }
@@ -74,6 +96,10 @@
       padding: 0 40px;
       display: flex;
       justify-content: space-between;
+
+      @include mq(s) {
+        padding: 0;
+      }
 
       .prev-arrow, .next-arrow {
         width: 15px;

@@ -37,7 +37,7 @@
     &-block {
       background: transparent;
       width: 180px;
-      height: 180px;
+      height: 195px;
       perspective: 1000px;
 
       @include mq(md) {
@@ -49,6 +49,12 @@
       @include mq(s) {
         width: 48%;
         margin-bottom: 30px;
+      }
+
+      @include mq(xs) {
+        width: 62%;
+        min-width: 180px;
+        margin: 0 auto 30px;
       }
 
       &__inner {
@@ -104,7 +110,7 @@
 
         &-back {
           box-sizing: border-box;
-          padding: 27px 12px 0;
+          padding: 27px 12px 15px;
           background: $white;
           transform: rotateY(180deg);
 
@@ -112,7 +118,6 @@
             transform: rotateY(0deg);
             opacity: 0;
             transition: all 0.75s ease-in-out;
-            //transition: all 1.15s ease-in-out;
           }
 
           @include mq(md) {

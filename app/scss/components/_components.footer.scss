@@ -24,10 +24,18 @@
       color: $pastel-purple;
       margin: 9px auto 4px;
 
+      @include mq(s) {
+        margin: 11px auto 21px;
+      }
+
       &.address {
         margin: -11px auto 0;
         position: relative;
         z-index: 12;
+
+        @include mq(s) {
+          margin: 32px auto 0;
+        }
 
         a {
           display: inline-block;
@@ -46,6 +54,12 @@
         left: 15.25%;
       }
 
+      @include mq(s) {
+        position: static;
+        text-align: center;
+        margin-bottom: 6px;
+      }
+
       span {
 
         &.new-price {
@@ -58,26 +72,58 @@
     &-img {
       position: relative;
 
+      @include mq(s) {
+        max-width: 542px;
+        margin: 0 auto;
+      }
+
       img {
 
         @include mq(md) {
           width: 100%;
         }
+
+        @include mq(s) {
+          position: relative;
+          width: 137%;
+          min-width: 400px;
+          max-width: 750px;
+          left: -16.89%;
+          z-index: 12;
+        }
       }
 
       svg {
+        width: 800px;
         position: absolute;
         top: 28.92%;
         left: -314px;
         z-index: -1;
 
+        @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+          height: 270px;
+
+          @include mq(xl) {
+            height: 168px;
+          }
+        }
+
+        @include mq(xxl) {
+          left: -74px;
+        }
+
         @include mq(xl) {
+          top: 33.92%;
           left: 0;
           width: 500px;
         }
 
         @include mq(md) {
           width: 100%;
+        }
+
+        @include mq(s) {
+          top: 42.1%;
         }
 
         path {
@@ -92,6 +138,15 @@
 
         @include mq(md) {
           right: 7.66%;
+        }
+
+        @include mq(s) {
+          top: 11.28%;
+          left: 5%;
+        }
+
+        @include mq(xs) {
+          left: 0;
         }
 
         &:before {
@@ -114,9 +169,15 @@
       @include mq(md) {
         bottom: 55px;
       }
+
+      @include mq(s) {
+        position: static;
+        margin: 0 auto;
+      }
     }
 
     &:before {
+      /* скрыть на s */
       content: "";
       display: block;
       width: 128px;
@@ -125,6 +186,10 @@
       position: absolute;
       top: 103px;
       right: 18.12px;
+
+      @include mq(s) {
+        display: none;
+      }
     }
   }
 

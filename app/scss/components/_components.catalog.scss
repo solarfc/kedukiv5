@@ -9,8 +9,40 @@
     padding: 30px 0 142px;
   }
 
+  @include mq(s) {
+    position: relative;
+    z-index: 15;
+  }
+
   .delivery {
 
+    @include mq(s) {
+      display: block;
+      text-align: center;
+    }
+
+    h6 {
+
+      &:nth-child(2) {
+
+        @include mq(s) {
+          margin: 26px auto;
+
+          &:before, &:after {
+            left: 50%;
+            transform: translateX(-50%);
+          }
+
+          &:before {
+            top: -16px;
+          }
+
+          &:after {
+            top: 28px;
+          }
+        }
+      }
+    }
   }
 
   h3 {
@@ -45,6 +77,16 @@
         top: 23px;
         right: 20px;
 
+        @include mq(s) {
+          position: static;
+          text-align: center;
+          margin-bottom: 10.83px;
+        }
+
+        @include mq(xs) {
+          text-align: left;
+        }
+
         svg {
 
           &:last-child {
@@ -58,10 +100,30 @@
 
       h4 {
 
+        @include mq(s) {
+          text-align: center;
+        }
+
+        @include mq(xs) {
+          text-align: left;
+        }
+
+        output {
+          transition: all 0.5s ease-in-out;
+        }
       }
 
       ul {
         margin: 15px 0 0;
+
+        @include mq(s) {
+          max-width: 360px;
+          margin: 15px auto 0;
+        }
+
+        @include mq(xs) {
+          margin: 15px 0 0;
+        }
 
         li {
           margin-bottom: 11.33px;
@@ -78,6 +140,24 @@
           }
         }
       }
+      .price {
+
+        @include mq(s) {
+          text-align: center;
+          margin-bottom: 6px;
+        }
+
+        @include mq(xs) {
+          text-align: left;
+        }
+
+        span {
+
+          &.old-price {
+            margin-left: 3px;
+          }
+        }
+      }
 
       &__img {
         width: 539px;
@@ -86,9 +166,17 @@
         position: absolute;
         top: 65px;
         right: 20px;
+        transition: all 0.5s ease-in-out;
 
         @include mq(md) {
           width: 270px;
+        }
+
+        @include mq(s) {
+          position: static;
+          width: 100%;
+          max-width: 600px;
+          margin: 0 auto;
         }
 
         a {
@@ -124,19 +212,27 @@
           a {
             width: 48.14%;
 
+            @include mq(s) {
+              width: 32%;
+              margin-bottom: 10px;
+            }
+
+            @include mq(xs) {
+              width: 48.14%;
+              margin-bottom: 0;
+            }
+
             &:nth-child(3), &:nth-child(4) {
               margin: 10.28px 0;
+
+              @include mq(s) {
+                margin: 0;
+              }
+
+              @include mq(xs) {
+                margin: 10.11px 0;
+              }
             }
-          }
-        }
-      }
-
-      .price {
-
-        span {
-
-          &.old-price {
-            margin-left: 3px;
           }
         }
       }
@@ -152,6 +248,12 @@
           flex-wrap: wrap;
         }
 
+        @include mq(s) {
+          display: block;
+          max-width: 380px;
+          margin: 24px auto 0;
+        }
+
         .form-group {
           width: 28%;
           max-width: 260px;
@@ -162,6 +264,11 @@
 
           @include mq(md) {
             width: 32%;
+          }
+
+          @include mq(s) {
+            width: 100%;
+            max-width: 100%;
           }
 
           input {
@@ -191,6 +298,13 @@
             }
           }
 
+          &.tel {
+
+            @include mq(s) {
+              margin: 10px auto;
+            }
+          }
+
           &.order {
             max-width: 280px;
             position: absolute;
@@ -204,6 +318,11 @@
 
             @include mq(md) {
               width: 100%;
+              bottom: -90px;
+            }
+
+            @include mq(s) {
+              max-width: 380px;
             }
           }
         }
@@ -218,6 +337,11 @@
 
           @include mq(md) {
             width: 32%;
+          }
+
+          @include mq(s) {
+            width: 100%;
+            max-width: 100%;
           }
 
           .jq-selectbox {
@@ -367,6 +491,14 @@
           margin-bottom: 15px;
           display: flex;
 
+          @include mq(s) {
+            justify-content: center;
+          }
+
+          @include mq(xs) {
+            justify-content: flex-start;
+          }
+
           p {
 
           }
@@ -422,7 +554,11 @@
           margin: 30px 0 15px;
 
           @include mq(lg) {
-            max-width: 360px;
+            max-width: 359px;
+          }
+
+          @include mq(s) {
+            max-width: 100%;
           }
         }
 
@@ -443,8 +579,16 @@
               width: 50%;
             }
 
+            @include mq(s) {
+              width: 100%;
+            }
+
             &.tel {
               margin-left: 15px;
+
+              @include mq(s) {
+                margin: 10px auto;
+              }
             }
           }
 

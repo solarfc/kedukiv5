@@ -70,6 +70,12 @@
         margin: 8px auto -15px;
       }
 
+      @include mq(xs) {
+        font-size: 36px;
+        line-height: 30px;
+        margin-bottom: -8px;
+      }
+
       span {
         display: block;
       }
@@ -100,6 +106,7 @@
       }
 
       svg {
+        width: 800px;
         position: absolute;
         top: 30.11%;
         left: 50%;
@@ -112,7 +119,7 @@
         @include mq(s) {
           width: 122%;
           min-width: 290px;
-          top: 34%;
+          top: 41.36%;
         }
       }
 
@@ -157,6 +164,15 @@
       text-align: center;
       color: $pastel-purple;
       margin-top: 17px;
+
+      @include mq(md) {
+        margin-top: 14px;
+      }
+
+      @include mq(xs) {
+        width: 76.2%;
+        margin: 14px auto 0;
+      }
     }
 
     &:before, &:after {
@@ -186,6 +202,11 @@
         top: 0;
         left: 0;
       }
+
+      @include mq(xs) {
+        top: -60px;
+        left: -67px;
+      }
     }
 
     &:after {
@@ -208,6 +229,11 @@
       @include mq(s) {
         top: 179.21px;
         left: 0;
+      }
+
+      @include mq(xs) {
+        top: 145px;
+        left: -56px;
       }
     }
   }

@@ -74,6 +74,11 @@ h3 {
   text-align: center;
   color: $pale-red;
 
+  @include mq(xs) {
+    font-size: 24px;
+    line-height: 29px;
+  }
+
   span {
     font-family: $sb;
   }
@@ -85,6 +90,11 @@ h4 {
   letter-spacing: 2px;
   text-transform: uppercase;
   color: $dark-violet;
+
+  @include mq(xs) {
+    font-size: 20px;
+    line-height: 25px;
+  }
 }
 
 h6 {
@@ -242,6 +252,10 @@ a.to-order, .form-group.order button {
 
 a.to-order {
   max-width: 280px;
+
+  @include mq(s) {
+    max-width: 380px;
+  }
 }
 
 .gallery, .photo {
@@ -281,6 +295,11 @@ a.to-order {
         margin-bottom: 11px;
       }
 
+      @include mq(xs) {
+        width: 47.58%;
+        min-width: 138px;
+      }
+
       img {
         width: 100%;
         transition: all 0.5s ease-in-out;
@@ -318,4 +337,79 @@ a.to-order {
       position: absolute;
     }
   }
+}
+
+a.bucket {
+  width: 100px;
+  height: 100px;
+  background: $yellow;
+  border-radius: 50%;
+  box-shadow: 0 3px 5px rgba(0, 0, 0, 0.2);
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  transition: all 0.5s ease-in-out;
+  z-index: 9999;
+
+  @include mq(xs) {
+    width: 80px;
+    height: 80px;
+  }
+
+  &:after {
+    content: "";
+    display: block;
+    position: absolute;
+    width: 50px;
+    height: 48px;
+    background: url("../img/bucket.png") no-repeat center/cover;
+    top: 28px;
+    left: 22px;
+
+    @include mq(xs) {
+      width: 40px;
+      height: 38px;
+      top: 22.4px;
+      left: 17.6px;
+    }
+  }
+}
+
+.body-filter {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0);
+  z-index: -5;
+  transition: all 0.25s ease-in-out;
+}
+
+.loader {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background: $gradient;
+  z-index: 99999;
+  transition: all 0.5s ease-in-out;
+
+  &__snow {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: url("../img/snowflake1.png"), url("../img/snowflake2.png"), url("../img/snowflake3.png");
+    animation: snow 20s linear infinite;
+  }
+}
+
+@keyframes snow {
+  0% {background-position: 0 0, 0 0, 0 0;}
+  100% {background-position: 500px 1000px, 400px 400px, 300px 300px;}
 }

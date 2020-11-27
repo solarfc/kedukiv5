@@ -30,7 +30,7 @@
 
       &.shoe {
         top: 17px;
-        left: -63px;
+        left: -43px;
         z-index: 11;
         pointer-events: none;
 
@@ -38,6 +38,26 @@
           top: 0;
           left: 0;
           margin: -165px auto -175px;
+        }
+
+        @include mq(s) {
+          margin: -25% auto;
+          max-width: 658px;
+        }
+
+        @include mq(xs) {
+          width: 136%;
+          min-width: 395px;
+          left: calc(50%);
+          transform: translateX(-50%);
+          margin: -25% 0 -35%;
+        }
+
+        img {
+
+          @include mq(s) {
+            width: 100%;
+          }
         }
 
         &:before {
@@ -50,6 +70,18 @@
           top: 269.98px;
           left: 90.23px;
           z-index: -1;
+
+          @include mq(s) {
+            top: 32%;
+            left: 10%;
+          }
+
+          @include mq(xs) {
+            width: 123px;
+            height: 121px;
+            top: 35%;
+            left: 12%;
+          }
         }
       }
 
@@ -74,8 +106,8 @@
         }
 
         @include mq(lg) {
-          width: 550px;
-          height: 330px;
+          width: 540px;
+          height: 324px;
         }
 
         @include mq(md) {
@@ -83,6 +115,13 @@
           height: 420px;
           top: 0;
           margin: 0 auto;
+        }
+
+        @include mq(s) {
+          width: 100%;
+          max-width: 650px;
+          height: auto;
+          padding-bottom: 60%;
         }
 
         img {
@@ -100,6 +139,16 @@
           left: 50%;
           transform: translate(-50%, -50%);
           pointer-events: none;
+
+          @include mq(s) {
+            width: 50px;
+            height: 50px;
+          }
+
+          @include mq(xs) {
+            width: 29px;
+            height: 29px;
+          }
         }
       }
     }
