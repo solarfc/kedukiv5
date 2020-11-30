@@ -112,6 +112,10 @@
         left: 50%;
         transform: translateX(-50%);
 
+        @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+          height: 270px;
+        }
+
         @include mq(md) {
           width: 100%;
         }

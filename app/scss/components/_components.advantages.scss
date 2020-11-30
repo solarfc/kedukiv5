@@ -176,6 +176,10 @@
             @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
               opacity: 0;
             }
+
+            svg {
+              opacity: 0;
+            }
           }
 
           &-back {

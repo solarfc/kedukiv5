@@ -139,6 +139,7 @@
           left: 50%;
           transform: translate(-50%, -50%);
           pointer-events: none;
+          transition: all 0.5s ease-in-out;
 
           @include mq(s) {
             width: 50px;
@@ -148,6 +149,13 @@
           @include mq(xs) {
             width: 29px;
             height: 29px;
+          }
+        }
+
+        &:hover {
+
+          .video-play {
+            transform: translate(-50%, -50%) scale(1.2);
           }
         }
       }
