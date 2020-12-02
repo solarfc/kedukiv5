@@ -14,10 +14,6 @@
   &__content {
     position: relative;
 
-    h3 {
-
-    }
-
     &-slider {
       margin: 81px auto 94px;
 
@@ -124,6 +120,21 @@
 
       &:hover {
         text-decoration: none;
+      }
+    }
+
+    &:before {
+      content: "";
+      display: block;
+      width: 117px;
+      height: 94px;
+      background: url("../img/gallery/decor-second.png") no-repeat center/cover;
+      position: absolute;
+      top: -68px;
+      left: -52px;
+
+      @include mq(md) {
+        display: none;
       }
     }
   }

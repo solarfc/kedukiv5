@@ -10,20 +10,4 @@
   @include mq(md) {
     padding: 16px 0 31px;
   }
-
-  &__content {
-
-    &:before {
-      /* скрыть на md */
-      width: 117px;
-      height: 94px;
-      background: url("../img/gallery/decor-second.png") no-repeat center/cover;
-      bottom: -125px;
-      left: 158px;
-
-      @include mq(md) {
-        display: none;
-      }
-    }
-  }
 }

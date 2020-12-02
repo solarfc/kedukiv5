@@ -11,19 +11,46 @@
 
   &__content {
 
-    &:before {
-      width: 157px;
-      height: 137px;
-      background: url("../img/gallery/decor-first.png") no-repeat center/cover;
-      top: -83px;
-      right: 185.66px;
+    a {
 
-      @include mq(md) {
-        width: 94px;
-        height: 84px;
-        top: -53.68px;
-        left: -26.46px;
-        z-index: -1;
+      &:first-child, &:nth-child(5) {
+
+        &:before {
+          content: "";
+          background: url("../img/gallery/decor-first.png") no-repeat center/cover;
+          position: absolute;
+          z-index: -1;
+        }
+      }
+
+      &:first-child {
+
+        &:before {
+          display: none;
+
+          @include mq(md) {
+            display: block;
+            width: 79px;
+            height: 84px;
+            top: -53.68px;
+            left: -27.46px;
+          }
+        }
+      }
+
+      &:nth-child(5) {
+
+        &:before {
+          display: block;
+          width: 157px;
+          height: 137px;
+          top: -90px;
+          left: -34.72px;
+
+          @include mq(md) {
+            display: none;
+          }
+        }
       }
     }
   }

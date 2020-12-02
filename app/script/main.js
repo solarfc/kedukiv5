@@ -99,35 +99,6 @@ window.onload = function () {
         }
     }
 
-    // const headerImage = document.querySelector('.header__content-img figure img'),
-    //     toggleImage = () => {
-    //         headerImage.style.opacity = '0';
-    //         setTimeout(() => {
-    //             headerImage.src = 'img/header/shoe-second.png';
-    //         }, 1600);
-    //         setTimeout(() => {
-    //             headerImage.style.opacity = '1';
-    //         }, 1700);
-    //         setTimeout(() => {
-    //             headerImage.style.opacity = '0';
-    //         },3200);
-    //         setTimeout(() => {
-    //             headerImage.src = 'img/header/shoe-first.png';
-    //         }, 4800);
-    //         setTimeout(() => {
-    //             headerImage.style.opacity = '1';
-    //         }, 6300);
-    //     }
-    //     setInterval(toggleImage, 10000);
-    // setInterval(toggleImage, 2000);
-
-
-    // console.log(obj);
-
-    /*
-        feedback
-     */
-
     /*
         send feedback
      */

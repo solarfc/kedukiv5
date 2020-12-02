@@ -93,20 +93,11 @@
         }
       }
 
-      svg {
-        width: 800px;
+      img.logo {
         position: absolute;
         top: 28.92%;
         left: -314px;
         z-index: -1;
-
-        @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
-          height: 270px;
-
-          @include mq(xl) {
-            height: 168px;
-          }
-        }
 
         @include mq(xxl) {
           left: -74px;
@@ -124,10 +115,6 @@
 
         @include mq(s) {
           top: 42.1%;
-        }
-
-        path {
-          fill: #6771ca;
         }
       }
 

@@ -105,16 +105,11 @@
         }
       }
 
-      svg {
-        width: 800px;
+      img.logo {
         position: absolute;
         top: 30.11%;
         left: 50%;
         transform: translateX(-50%);
-
-        @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
-          height: 270px;
-        }
 
         @include mq(md) {
           width: 100%;

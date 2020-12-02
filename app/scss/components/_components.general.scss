@@ -259,49 +259,46 @@ a.to-order {
 }
 
 .gallery, .photo {
+  position: relative;
+  z-index: 15;
 
   &__content {
+    box-sizing: border-box;
     width: 100%;
     max-width: 1620px;
     margin: 0 auto;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-    position: relative;
 
     @include mq(xxl) {
-      box-sizing: border-box;
       padding: 0 25px;
     }
 
-    @include mq(lg) {
+    @include mq(md) {
       padding: 0 15px;
     }
 
     a {
-      width: 18.51%;
+      width: 19%;
       max-width: 300px;
-      border-radius: 10px;
-      overflow: hidden;
-      position: relative;
-      filter: drop-shadow($drop-shadow1);
       margin-bottom: 30px;
-
-      @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
-        box-shadow: $drop-shadow1;
-      }
+      border-radius: 10px;
+      box-shadow: $drop-shadow1;
+      position: relative;
 
       @include mq(md) {
         margin-bottom: 11px;
       }
 
       @include mq(xs) {
-        width: 47.58%;
+        width: 48%;
         min-width: 138px;
       }
 
       img {
         width: 100%;
+        border-radius: inherit;
         transition: all 0.5s ease-in-out;
       }
 
@@ -329,12 +326,6 @@ a.to-order {
           opacity: 1;
         }
       }
-    }
-
-    &:before {
-      content: "";
-      display: block;
-      position: absolute;
     }
   }
 }
@@ -372,6 +363,10 @@ a.bucket {
       top: 22.4px;
       left: 17.6px;
     }
+  }
+
+  &:hover {
+    transform: scale(1.2);
   }
 }
 
